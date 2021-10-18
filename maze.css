@@ -13,10 +13,15 @@ grid-template-columns: repeat(auto-fill, minmax(40px, 40px));
 grid-template-rows: repeat(auto-fill, minmax(40px, 40px));
 grid-gap: 0px;
 }
-
 .areas{
   width:40px;
   height:40px;
-  background-color: tomato;
   border: 1px ridge white;
+  background-color: black;
+}
+.joueur{
+  width:20px;
+  height:20px;
+  background-color: turquoise;
+  border-radius: 50%;
 }

@@ -5,17 +5,24 @@ body{
   width:100%;
 }
 main{
-  width:520px;
-  height:560px;
-  border:5px ridge black;
-  display: grid;
-grid-template-columns: repeat(auto-fill, minmax(40px, 40px));
-grid-template-rows: repeat(auto-fill, minmax(40px, 40px));
+width:450px;
+height:420px;
+border:5px ridge black;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(30px, 30px));
+grid-template-rows: repeat(auto-fill, minmax(30px, 30px));
 grid-gap: 0px;
 }
+object{
+  position:absolute;
+  width: 450px;
+  height: 420px;
+  z-index:99;
+  display:none;
+}
 .areas{
-  width:40px;
-  height:40px;
+  width:30px;
+  height:30px;
   border: 1px ridge white;
   background-color: black;
 }
@@ -24,4 +31,11 @@ grid-gap: 0px;
   height:20px;
   background-color: turquoise;
   border-radius: 50%;
+  z-index: 9;
+}
+.tresor{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: -1;
 }

@@ -44,6 +44,7 @@ for (const [key, value] of Object.entries(LEVEL_1)) {
 
 let index = 16;
 let areas= document.querySelectorAll('.areas')
+const gif= document.querySelector('object')
 
 document.addEventListener('keydown', function(e) {
   switch (e.keyCode) {
@@ -70,6 +71,9 @@ document.addEventListener('keydown', function(e) {
   }
   if(tresor.nextSibling === joueur){
     alert('you got the treasure !')
-    
+    gif.style.display= 'block';
+    setTimeout(function(){
+      gif.style.display= 'none'
+    }, 2000)
   }
 });

@@ -1,6 +1,6 @@
 const LEVEL_1 = 
   ["S","*","*","*","*","*","*","*","*","*","*",".","*",
-   "T","*",".",".",".",".",".","*","*",".","*",".","T",
+   "*","*",".",".",".",".",".","*","*",".","*",".","T",
   "*","*","*","*","*",".",".",".",".",".","*",".","*",
   "*","*","*","*","*",".","*","*","*",".","*",".","*",
   "*","*","*","*","*",".","*","*","*","*","*",".","*",
@@ -28,8 +28,9 @@ for (const [key, value] of Object.entries(LEVEL_1)) {
     areas.id= 'chemin'
   }
   if (value === 'T'){
-    areas.style.backgroundColor= 'yellow'
-    areas.id= 'tresor'
+    var tresor= document.createElement('p')
+   tresor.setAttribute('class', 'tresor')
+    areas.appendChild(tresor)
   }
   if (value === 'S'){
     var joueur= document.createElement('p')
@@ -40,30 +41,33 @@ for (const [key, value] of Object.entries(LEVEL_1)) {
 
 let index = 0;
 let areas= document.querySelectorAll('.areas')
-let tresor= document.querySelectorAll('tresor')
 
 document.addEventListener('keydown', function(e) {
   switch (e.keyCode) {
       case 37: //left arrow
-        if (areas[index-1].id === 'chemin'){
+        if(areas[index-1].id != 'mur'){
         areas[index-=1].appendChild(joueur)
         }
           break;
       case 38: //up arrow
-      if (areas[index-13].id === 'chemin'){
+      if (areas[index-13].id != 'mur'){
         areas[index-=13].appendChild(joueur)
       }
           break;
       case 39: //right arrow
-      if (areas[index+1].id === 'chemin'){
+      if (areas[index+1].id != 'mur'){
         areas[index+=1].appendChild(joueur)
       }
           break;
       case 40: //bottom arrow
-      if(areas[index+13].id === 'chemin'){
+      if(areas[index+13].id != 'mur'){
         areas[index+=13].appendChild(joueur)
       }
           break;
+  }
+  if(tresor.nextSibling === joueur){
+    alert('you got the treasure')
+    
   }
 });
 

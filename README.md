@@ -1,0 +1,3 @@
+# amazeing
+
+- A maze game

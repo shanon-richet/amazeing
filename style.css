@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'halloween';
+  src: url('/Scary-Halloween-Font.ttf') format('truetype');
+}
+body {
+    overflow-y: hidden;
+    height: auto;
+    background: #63768D;
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+main section > * {
+  margin: 0px;
+}
+.areas {
+  margin: 0px;
+  width: 60px;
+  height: 60px;
+}
+#level0 {
+  width: 900px;
+}
+#level1 {
+  width: 1440px;
+}
+#level2 {
+  width: 600px;
+}
+.joueur, .tresor{
+    width: 60px;
+    height: 60px;
+}
+.joueur {
+  z-index: 9;
+}
+.tresor {
+  z-index: -1;
+}
+.illusion, .win {
+  position: absolute;
+  display: none;
+}
+.illusion {
+  width: 1500px;
+  height: 1000px;
+  z-index: 12;
+}
+.win {
+  margin-left: 100px;
+  font-family: 'halloween';
+  font-size: 100px;
+  z-index: 15;
+  color: #B8F3FF;
+}

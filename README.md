@@ -1,6 +1,6 @@
 # amazeing
 
-A maze game 
+This is a very simple maze game with halloween theme
 
 ## Font
 
